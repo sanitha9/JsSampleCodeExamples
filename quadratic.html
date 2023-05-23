@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    <script>
+        function solveQuadratic(a, b, c) {
+            let discriminant = b*b - 4*a*c;
+            let root1, root2;
+            
+            // Check if discriminant is positive
+            if (discriminant > 0) {
+              root1 = (-b + Math.sqrt(discriminant)) / (2*a);
+              root2 = (-b - Math.sqrt(discriminant)) / (2*a);
+              return "The roots are " + root1 + " and " + root2;
+            }
+            // Check if discriminant is zero
+            else if (discriminant == 0) {
+              root1 = -b / (2*a);
+              return "The root is " + root1;
+            }
+            // If discriminant is negative, roots are complex
+            else {
+              let realPart = -b / (2*a);
+              let imaginaryPart = Math.sqrt(-discriminant) / (2*a);
+              return "The roots are " + realPart + " + " + imaginaryPart + "i and " + realPart + " - " + imaginaryPart + "i";
+            }
+          }
+    </script>
+</head>
+<body>
+    <script>
+    let a = prompt("enter frstnumner:");
+    let b = prompt("Enter second number:");
+    let c = prompt("Enter the third number");
+    let result = solveQuadratic(a,b,c);
+
+    console.log(result);
+    </script>
+
+</body>
+</html>

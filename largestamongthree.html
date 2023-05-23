@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function largestOne(){
+            
+            let a=parseInt(document.getElementById("fn").value);
+            let b=parseInt(document.getElementById("sn").value);
+
+            let c=parseInt(document.getElementById("tn").value);
+            if(a>b){
+               
+                // alert("Largest number is:"+a);
+                document.write("largest number is"+a);
+            
+            }else if(b>c){
+                // alert("Largest number is:"+b);
+                 document.write("largest number is"+b);
+
+            }
+            else{
+            // alert("Largest number is:"+c);
+                document.write("Largest number is"+c);
+            // }
+            }
+
+
+            document.getElementById("fn").value = "";
+            document.getElementById("sn").value = "";
+            document.getElementById("tn").value = "";
+        }
+    </script>
+</head>
+<body>
+    <p>FirstNumber:</p><input id="fn">
+    <p>SecondNumber:</p><input id="sn">
+    <p>ThirdNumber:</p><input id="tn">
+    <button onclick="largestOne()">Check</button>
+</body>
+</html>

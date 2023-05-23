@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number Checker</title>
+</head>
+<body>
+    <script>
+        function isArmstrongNumber(number) {
+            var numString = number.toString();
+            var length = numString.length;
+            var sum = 0;
+            
+            for (var i = 0; i < length; i++) {
+                var digit = parseInt(numString.charAt(i));
+                var digitPower = Math.pow(digit, length);
+                sum += digitPower;
+            }
+            
+            return sum === number;
+        }
+
+        var number = parseInt(prompt("Enter the number:"));
+
+        if (isArmstrongNumber(number)) {
+            console.log(number + " is an Armstrong number");
+        } else {
+            console.log(number + " is not an Armstrong number");
+        }
+    </script>
+</body>
+</html>

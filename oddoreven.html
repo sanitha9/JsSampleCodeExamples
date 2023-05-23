@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function oddoreven(){
+         let num1;
+          num1=parseInt(document.getElementById("fn").value);
+          if(num1%2==0){
+            // alert("Number is Even");
+            document.write("Number is Even");
+          }
+          else{
+            // alert("Number is odd");
+          }
+          document.getElementById("fn").value = "";
+        }
+    </script>
+</head>
+<body>
+   <p>EnterNumber:</p><input id="fn">
+   <button onclick="oddoreven()">Check</button>
+   <!-- <p>Result:<input id="rl"></p>
+    -->
+</body>
+</html>
